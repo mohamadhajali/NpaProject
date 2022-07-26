@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="/jquery/dist/jquery.js"></script>
+  <script src="/handlebars/dist/handlebars.js"></script>
+</head>
+<body>
+  <span>
+    <input id="nameOFteam" type="text" />
+    <button onclick="feachData()">Get Roster</button>
+    <button onclick="displayDreamTeam()">dream Team</button>
+  </span>
+
+  <script id="template" type="text/x-handlebars-template">
+    {{#each playarTeam}}
+      <div class="playerCard">
+        <p id="name">{{firstName}} {{lastName}}</p>
+        <p id="pos">{{pos}}</p>
+        <p id="heightFeet">{{heightFeet}}</p>
+        <div>
+          <img
+            id="palyarImg"
+            src="https:nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}
+            "
+            onerror="ImageForError(this)"
+          />
+        </div>
+
+        <button id="{{personId}}" onclick="addToDreamTeam(this.id)">Add to dream
+          team</button>
+
+      </div>
+
+    {{/each}}
+  </script>
+  <div id="continar"></div>
+</body>
+<script src="main.js"></script>

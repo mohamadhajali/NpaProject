@@ -1,0 +1,32 @@
+body {
+  background-color: antiquewhite;
+}
+
+input {
+  width: 80%;
+}
+button {
+  width: 15%;
+  background-color: green;
+  font-style: italic;
+  font-weight: bold;
+}
+#continar {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1vw;
+}
+img {
+  background-color: #bdc3c7;
+  box-shadow: 1px 1px 3px black;
+  box-sizing: border-box;
+}
+.playerCard {
+  background-color: #bdc3c7;
+  text-align: center;
+  align-content: center;
+  padding-right: 1px;
+
+  padding-left: 1px;
+}
